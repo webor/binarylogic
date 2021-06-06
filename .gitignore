@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-/dist
+# /dist since we are dployin to s3 from dist we need dist in github repo
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
