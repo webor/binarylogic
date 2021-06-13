@@ -34,7 +34,7 @@ export default defineComponent({
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 1000px;
 }
 
 .name {

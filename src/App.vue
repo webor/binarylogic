@@ -17,14 +17,24 @@
 
 #nav {
   padding: 30px;
-
+  height: 60px;
+  width: 100vw;
+  background: #00000060;
+  position: fixed;
+  box-shadow: 0 2px 15px rgb(133, 133, 133);
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s all ease-out;
   a {
     font-weight: bold;
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #ffffff;
     }
   }
+}
+#nav#navbar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
 }
 </style>
