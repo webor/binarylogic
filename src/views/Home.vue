@@ -1,23 +1,144 @@
 <template>
-  <div class="home">
-    <img id="logo" alt="Binary Logic Logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Binary Logic . A Tech Blogging Portal" />
-  </div>
+  <transition name="fade" tag="div" class="home" mode="out-in">
+    <div class="wrapper" v-if="isLoaded" id="app">
+      <div id="tsparticles">
+        <Particles
+          id="tsparticles"
+          :particlesInit="particlesInit"
+          :particlesLoaded="particlesLoaded"
+          :options="{
+            background: {
+              color: {
+                value: '#ffffff00',
+              },
+            },
+            fpsLimit: 60,
+            interactivity: {
+              detectsOn: 'canvas',
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: 'push',
+                },
+                onHover: {
+                  enable: true,
+                  mode: 'repulse',
+                },
+                resize: true,
+              },
+              modes: {
+                bubble: {
+                  distance: 400,
+                  duration: 2,
+                  opacity: 0.8,
+                  size: 40,
+                },
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 70,
+                  duration: 0.4,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: '#333',
+              },
+              links: {
+                color: '#A9A9A9',
+                distance: 150,
+                enable: true,
+                opacity: 0.5,
+                width: 1,
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                direction: 'none',
+                enable: true,
+                outMode: 'bounce',
+                random: false,
+                speed: 1,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  value_area: 800,
+                },
+                value: 80,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: 'circle',
+              },
+              size: {
+                random: true,
+                value: 4,
+              },
+            },
+            detectRetina: true,
+          }"
+        />
+      </div>
+      <LandingPage :user="user" />
+    </div>
+  </transition>
 </template>
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent } from "vue";
+import LandingPage from "../components/LandingPage.vue";
 
-@Options({
+export default defineComponent({
+  name: "Home",
   components: {
-    HelloWorld,
+    LandingPage,
   },
-})
-export default class Home extends Vue {}
+  data: () => ({
+    isLoaded: false,
+    user: {},
+    posts: [],
+  }),
+  methods: {
+    fetchPosts() {
+      return {};
+    },
+    fetchUser() {
+      return {};
+    },
+  },
+  created(): void {
+    Promise.all([this.fetchPosts(), this.fetchUser()]).then(
+      ([posts, users]) => {
+        document.body.classList.add("loading");
+        this.isLoaded = true;
+      }
+    );
+  },
+});
 </script>
 <style scoped lang="scss">
-#logo {
-  width: 100px;
-  height: 100px;
+canvas {
+  display: block;
+  vertical-align: bottom;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
+  transition: opacity 0.8s ease, transform 1.4s ease;
+}
+#tsparticles {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
 }
 </style>
