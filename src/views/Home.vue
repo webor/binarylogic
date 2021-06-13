@@ -101,6 +101,8 @@ export default defineComponent({
   },
   data: () => ({
     isLoaded: false,
+    showNavbar: true,
+    lastScrollPosition: 0,
     user: {},
     posts: [],
   }),
@@ -111,6 +113,20 @@ export default defineComponent({
     fetchUser() {
       return {};
     },
+    onScroll() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition < 0) {
+        return;
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return;
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = currentScrollPosition;
+    },
   },
   created(): void {
     Promise.all([this.fetchPosts(), this.fetchUser()]).then(
@@ -119,6 +135,12 @@ export default defineComponent({
         this.isLoaded = true;
       }
     );
+  },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
   },
 });
 </script>

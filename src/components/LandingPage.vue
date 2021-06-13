@@ -51,7 +51,7 @@ export default defineComponent({
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     padding: 2px 10px;
     text-align: center;
     text-transform: uppercase;
@@ -92,7 +92,7 @@ export default defineComponent({
       width: 450px;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 4rem;
       padding: 4% 10%;
     }
     p {

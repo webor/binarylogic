@@ -69,7 +69,7 @@ export default {
     );
   },
 
-  destroyed() {
+  unmounted() {
     window.removeEventListener("scroll", this.detectVisibility);
     window.removeEventListener("resize", this.detectVisibility);
     window.removeEventListener("orientationchange", this.detectVisibility);
