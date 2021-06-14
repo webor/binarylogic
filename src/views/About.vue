@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <img id="logo" alt="Binary Logic Logo" src="../assets/logo.png" />
+    <img id="logo" alt="Binary Logic Logo" src="../assets/img/logo.png" />
     <HelloWorld msg="Welcome to Binary Logic . A Tech Blogging Portal" />
   </div>
 </template>

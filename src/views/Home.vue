@@ -87,23 +87,27 @@
         />
       </div>
       <LandingPage :user="user" />
+      <Description :user="user" />
     </div>
   </transition>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import LandingPage from "../components/LandingPage.vue";
+import Description from "../components/Description.vue";
+import user from "../jsons/user.json";
 
 export default defineComponent({
   name: "Home",
   components: {
     LandingPage,
+    Description,
   },
   data: () => ({
     isLoaded: false,
     showNavbar: true,
     lastScrollPosition: 0,
-    user: {},
+    user: user,
     posts: [],
   }),
   methods: {

@@ -5,8 +5,14 @@ import router from './router'
 import store from './store'
 import Particles from "particles.vue3"
 import AnimateOnVisible from "./components/AnimateOnVisible.vue"
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTwitter, faStackOverflow, faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faStackOverflow, faTwitter, faLinkedin, faGithubSquare)
 
 createApp(App)
+    .component('font-awesome-icon', FontAwesomeIcon)
     .component('AnimateOnVisible', AnimateOnVisible)
     .use(store)
     .use(router)

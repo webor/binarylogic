@@ -1,0 +1,25 @@
+{
+    "id": "binarylogic",
+    "name": "Vibhor Tambat",
+    "title": "Full Stack Developer",
+    "description": {
+        "title": "About me",
+        "subtitle": "Would be glad to connect with you after",
+        "photo": "photo.jpeg"
+    },
+    "content": {
+        "title": "Something About me",
+        "subtitle": "My interest in Software Development stems from my passion for problem-solving. Have a long track record of creating dynamic, rich, and interactive web experiences, providing long term architectural solutions for front-end problems on various devices and platforms, adapting to cloud solutions to scale, and directing complex projects from concepts to fully functioning deliverables. Well versed in agilesoftware development methodology. I'd love to be a part of an industry where I get to implement my knowledge and skills and be also learning along the way"
+    },
+    "social": {
+        "email": "tambatvibhor@gmail.com",
+        "phone": "+91 750 907 1498",
+        "city": "Pune, Maharashtra",
+        "links": {
+            "linkedIn": "https://www.linkedin.com/in/vibhor-tambat-782203128/",
+            "github": "https://github.com/webor",
+            "twitter": "https://twitter.com/vibhortambat",
+            "stackOverflow": "https://stackoverflow.com/users/11174471/webor"
+        }
+    }
+}
