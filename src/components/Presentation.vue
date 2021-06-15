@@ -18,6 +18,7 @@ export default {
 
 .paragraph {
   color: map-get($colors, primary);
+  font-size: 14px;
   .begin {
     color: map-get($colors, secondary);
   }

@@ -26,5 +26,6 @@ export default {
 
 .data {
   margin-bottom: 15px;
+  font-size: 15px;
 }
 </style>

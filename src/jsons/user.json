@@ -19,7 +19,46 @@
             "linkedIn": "https://www.linkedin.com/in/vibhor-tambat-782203128/",
             "github": "https://github.com/webor",
             "twitter": "https://twitter.com/vibhortambat",
-            "stackOverflow": "https://stackoverflow.com/users/11174471/webor"
+            "stackOverflow": "https://stackoverflow.com/users/11174471/webor",
+            "instagram": "https://www.instagram.com/vibh_oreo/"
         }
+    },
+    "skills": {
+        "title": "Skills and Tools",
+        "subtitle": "Here is my Arsenal",
+        "items": [
+            {
+                "title": "JS",
+                "img": "js.png"
+            },
+            {
+                "title": "HTML",
+                "img": "html.png"
+            },
+            {
+                "title": "CSS",
+                "img": "css.png"
+            },
+            {
+                "title": "PHP",
+                "img": "php.png"
+            },
+            {
+                "title": "Laravel",
+                "img": "laravel.png"
+            },
+            {
+                "title": "VueJS",
+                "img": "vuejs.png"
+            },
+            {
+                "title": "Android",
+                "img": "android.png"
+            },
+            {
+                "title": "Linux",
+                "img": "linux.png"
+            }
+        ]
     }
 }

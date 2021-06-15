@@ -21,7 +21,7 @@ export default {
   text-align: center;
   color: map-get($colors, primary);
   h2 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     text-transform: uppercase;
   }
 }
