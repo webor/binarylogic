@@ -28,8 +28,44 @@
         "subtitle": "Here is my Arsenal",
         "items": [
             {
-                "title": "JS",
+                "title": "Javascript",
                 "img": "js.png"
+            },
+            {
+                "title": "React",
+                "img": "react.png"
+            },
+            {
+                "title": "Node Js",
+                "img": "node.png"
+            },
+            {
+                "title": "Mongo DB",
+                "img": "mongo.png"
+            },
+            {
+                "title": "Express",
+                "img": "express.png"
+            },
+            {
+                "title": "AWS",
+                "img": "aws.png"
+            },
+            {
+                "title": "Bash Shell",
+                "img": "bash.png"
+            },
+            {
+                "title": "VueJS",
+                "img": "vuejs.png"
+            },
+            {
+                "title": "TypeScript",
+                "img": "ts.png"
+            },
+            {
+                "title": "Firebase",
+                "img": "firebase.png"
             },
             {
                 "title": "HTML",
@@ -40,24 +76,44 @@
                 "img": "css.png"
             },
             {
-                "title": "PHP",
-                "img": "php.png"
+                "title": "Git",
+                "img": "git.png"
             },
             {
-                "title": "Laravel",
-                "img": "laravel.png"
+                "title": "Fastify",
+                "img": "fastify.png"
             },
             {
-                "title": "VueJS",
-                "img": "vuejs.png"
+                "title": "Ionic",
+                "img": "ionic.png"
             },
             {
-                "title": "Android",
-                "img": "android.png"
+                "title": "PWA",
+                "img": "pwa.png"
             },
             {
-                "title": "Linux",
-                "img": "linux.png"
+                "title": "Python",
+                "img": "python.png"
+            },
+            {
+                "title": "React Native",
+                "img": "react-native.jpeg"
+            },
+            {
+                "title": "Go lang",
+                "img": "go.png"
+            },
+            {
+                "title": "Webpack",
+                "img": "webpack.png"
+            },
+            {
+                "title": "JSON",
+                "img": "json.png"
+            },
+            {
+                "title": "Expo",
+                "img": "expo.png"
             }
         ]
     }

@@ -8,11 +8,11 @@
       <div class="container-fluid">
         <div class="row d-flex flex-wrap align-items-center">
           <div
-            class="col-md-1 m-auto pb-4"
+            class="col-md-2 m-auto pb-4"
             v-for="(post, index) in skills.items"
             :key="index"
           >
-            <AnimateOnVisible name="bounce">
+            <AnimateOnVisible name="bounce" :duration="2">
               <img
                 id="imgLogo"
                 class="img-responsive mx-auto d-block"
