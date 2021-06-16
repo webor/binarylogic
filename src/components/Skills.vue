@@ -13,12 +13,14 @@
             :key="index"
           >
             <AnimateOnVisible name="bounce" :duration="2">
-              <img
-                id="imgLogo"
-                class="img-responsive mx-auto d-block"
-                :src="getImgUrl(post.img)"
-                :alt="post.title"
-              />
+              <div class="img-container">
+                <img
+                  id="imgLogo"
+                  class="img-responsive mx-auto d-block"
+                  :src="getImgUrl(post.img)"
+                  :alt="post.title"
+                />
+              </div>
               <div id="divAlt" class="altCaption text-center">
                 {{ post.title }}
               </div>
@@ -62,6 +64,9 @@ export default {
 }
 
 img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 60px;
   max-height: 60px;
 }
@@ -69,5 +74,10 @@ img {
 .altCaption {
   color: map-get($colors, secondary);
   margin-top: 1rem;
+}
+
+.img-container {
+  height: 60px;
+  position: relative;
 }
 </style>

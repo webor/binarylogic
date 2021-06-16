@@ -60,7 +60,7 @@
                 "img": "vuejs.png"
             },
             {
-                "title": "TypeScript",
+                "title": "Typescript",
                 "img": "ts.png"
             },
             {
@@ -80,8 +80,12 @@
                 "img": "git.png"
             },
             {
-                "title": "Fastify",
-                "img": "fastify.png"
+                "title": "Angular",
+                "img": "angular.png"
+            },
+            {
+                "title": "Jenkins",
+                "img": "jenkins.png"
             },
             {
                 "title": "Ionic",
@@ -114,6 +118,10 @@
             {
                 "title": "Expo",
                 "img": "expo.png"
+            },
+            {
+                "title": "Apache",
+                "img": "apache.png"
             }
         ]
     }
