@@ -136,7 +136,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/webpack.c500a380.png"
   },
   {
-    "revision": "df390455701c6b57f1de326d18d95065",
+    "revision": "29f0a4b5f7515a23676452bb99777bf3",
     "url": "/index.html"
   },
   {
@@ -158,6 +158,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f9eb17b71e5de6d7baf6754adbbb860f",
     "url": "/pdfs/resume.pdf"
+  },
+  {
+    "revision": "0433e79e34d5000ecfc24ff4d53488bb",
+    "url": "/photo.jpeg"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
