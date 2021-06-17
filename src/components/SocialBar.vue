@@ -43,6 +43,14 @@ export default {
   li {
     display: inline-block;
     margin-right: 10px;
+    svg {
+      transform: scale(1);
+      transition: all 0.25s ease-in;
+      &:hover {
+        transform: scale(1.25);
+        transition: all 0.25s ease-out;
+      }
+    }
   }
   .icon {
     font-size: 3rem;

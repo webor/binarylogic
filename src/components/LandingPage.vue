@@ -34,7 +34,7 @@ export default defineComponent({
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
+  height: 100vh;
 }
 
 .name {
@@ -51,7 +51,7 @@ export default defineComponent({
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 3.4rem;
     padding: 2px 10px;
     text-align: center;
     text-transform: uppercase;
@@ -60,7 +60,7 @@ export default defineComponent({
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: center;
     margin: 5px auto;
     color: #333;

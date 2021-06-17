@@ -14,7 +14,7 @@
             },
             fpsLimit: 60,
             interactivity: {
-              detectsOn: 'canvas',
+              detectsOn: 'window',
               events: {
                 onClick: {
                   enable: true,
@@ -37,7 +37,7 @@
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 70,
+                  distance: 100,
                   duration: 0.4,
                 },
               },
@@ -48,7 +48,7 @@
               },
               links: {
                 color: '#A9A9A9',
-                distance: 150,
+                distance: 180,
                 enable: true,
                 opacity: 0.5,
                 width: 1,

@@ -13,7 +13,15 @@
             :key="index"
           >
             <AnimateOnVisible name="bounce" :duration="2">
-              <div class="img-container">
+              <div
+                class="img-container"
+                v-tilt="{
+                  max: 35,
+                  scale: 1.4,
+                  speed: 500,
+                  perspective: 1000,
+                }"
+              >
                 <img
                   id="imgLogo"
                   class="img-responsive mx-auto d-block"
