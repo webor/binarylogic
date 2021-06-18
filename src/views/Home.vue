@@ -89,6 +89,7 @@
       <LandingPage :user="user" />
       <Description :user="user" />
       <Skills :skills="user.skills" />
+      <Projects :projects="user.projects" />
     </div>
   </transition>
 </template>
@@ -97,6 +98,7 @@ import { defineComponent } from "vue";
 import LandingPage from "../components/LandingPage.vue";
 import Description from "../components/Description.vue";
 import Skills from "../components/Skills.vue";
+import Projects from "../components/Projects.vue";
 import user from "../jsons/user.json";
 
 export default defineComponent({
@@ -105,6 +107,7 @@ export default defineComponent({
     LandingPage,
     Description,
     Skills,
+    Projects,
   },
   data: () => ({
     isLoaded: false,

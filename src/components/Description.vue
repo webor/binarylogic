@@ -6,7 +6,7 @@
         :description="user.description.subtitle"
       />
     </AnimateOnVisible>
-    <AnimateOnVisible name="fadeRight" :duration="1">
+    <AnimateOnVisible name="fadeUp" :duration="1">
       <div class="section-content">
         <div class="container-fluid">
           <div class="row justify-content-center">

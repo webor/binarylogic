@@ -6,7 +6,7 @@ import store from './store'
 import Particles from "particles.vue3"
 import AnimateOnVisible from "./components/AnimateOnVisible.vue"
 import { library } from '@fortawesome/fontawesome-svg-core';
-import VueTilt from 'vue-tilt.js'
+import VueTilt from 'vue-tilt.js';
 import { faTwitter, faStackOverflow, faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 

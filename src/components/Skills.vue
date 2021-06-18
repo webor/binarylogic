@@ -12,7 +12,7 @@
             v-for="(post, index) in skills.items"
             :key="index"
           >
-            <AnimateOnVisible name="bounce" :duration="2">
+            <AnimateOnVisible name="bounceUp" :duration="1">
               <div
                 class="img-container"
                 v-tilt="{
