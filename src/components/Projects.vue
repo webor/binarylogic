@@ -39,10 +39,17 @@
                   />
                 </div>
                 <div class="carousel_right">
-                  <h2>{{ post.title }}</h2>
+                  <h2>
+                    {{ post.title }}
+                  </h2>
                   <div class="carousel_text">
                     <div class="text-wrapper" v-html="post.content"></div>
                   </div>
+                  <span
+                    class="label carousel_label"
+                    v-bind:style="{ backgroundColor: post.color }"
+                    >{{ post.tag }}</span
+                  >
                   <div class="tech_wrap carousel_text">
                     <span> Tech Stack: </span>
                     <span v-for="(tech, index) in post.tech" :key="index">
@@ -123,6 +130,16 @@ article .inner {
   vertical-align: middle;
   z-index: 1;
 }
+.carousel_label {
+  float: left;
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  margin: 10px 0px;
+  font-size: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px 0 #18191a;
+}
 
 .pseudo_ribbon {
   position: absolute;
@@ -152,10 +169,11 @@ article .inner {
 .carousel_left {
   width: 50%;
   display: inline-block;
-  border-right: solid 1px #a9a9a9;
 }
 .carousel_right {
+  border-left: solid 1px #a9a9a9;
   width: 45%;
+  height: 100%;
   display: inline-block;
   padding-left: 20px;
   font-size: 14px;

@@ -142,6 +142,7 @@
                 "date": "2021-05-30",
                 "image": "project_1.png",
                 "tag": "App",
+                "color": "#158fad",
                 "title": "Android/IOS App",
                 "tech": [
                     {
@@ -167,6 +168,7 @@
                 "date": "2019-02-20",
                 "image": "project_2.png",
                 "tag": "Library",
+                "color": "#884dff",
                 "title": "Forms Library",
                 "tech": [
                     {
@@ -196,6 +198,7 @@
                 "date": "2018-08-23",
                 "image": "project_3.png",
                 "tag": "Web Application",
+                "color": "#294438",
                 "title": "Burger Merger",
                 "tech": [
                     {
@@ -217,6 +220,7 @@
                 "date": "2020-09-05",
                 "image": "project_4.png",
                 "tag": "Software",
+                "color": "black",
                 "title": "Bulk Downloads + Merge + Compress",
                 "tech": [
                     {
@@ -242,6 +246,7 @@
                 "date": "2020-01-05",
                 "image": "project_5.png",
                 "tag": "Web Application",
+                "color": "#2196F3",
                 "title": "WebApp +PWA",
                 "tech": [
                     {
@@ -267,6 +272,7 @@
                 "date": "2021-02-25",
                 "image": "project_6.png",
                 "tag": "Software",
+                "color": "#04AA6D",
                 "title": "Devops",
                 "tech": [
                     {

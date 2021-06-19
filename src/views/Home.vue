@@ -90,6 +90,7 @@
       <Description :user="user" />
       <Skills :skills="user.skills" />
       <Projects :projects="user.projects" />
+      <Footer :user="user" />
     </div>
   </transition>
 </template>
@@ -99,6 +100,7 @@ import LandingPage from "../components/LandingPage.vue";
 import Description from "../components/Description.vue";
 import Skills from "../components/Skills.vue";
 import Projects from "../components/Projects.vue";
+import Footer from "../components/Footer.vue";
 import user from "../jsons/user.json";
 
 export default defineComponent({
@@ -108,6 +110,7 @@ export default defineComponent({
     Description,
     Skills,
     Projects,
+    Footer,
   },
   data: () => ({
     isLoaded: false,

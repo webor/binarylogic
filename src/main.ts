@@ -7,10 +7,11 @@ import Particles from "particles.vue3"
 import AnimateOnVisible from "./components/AnimateOnVisible.vue"
 import { library } from '@fortawesome/fontawesome-svg-core';
 import VueTilt from 'vue-tilt.js';
+import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faStackOverflow, faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faStackOverflow, faTwitter, faLinkedin, faGithub, faInstagram)
+library.add(faStackOverflow, faTwitter, faLinkedin, faGithub, faInstagram, faCopyright)
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
