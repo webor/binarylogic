@@ -3692,7 +3692,7 @@ core-js-compat@^3.6.5, core-js-compat@^3.9.0, core-js-compat@^3.9.1:
     browserslist "^4.16.6"
     semver "7.0.0"
 
-core-js@^2.4.0, core-js@^2.6.5:
+core-js@^2.4.0, core-js@^2.6.12, core-js@^2.6.5:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
@@ -4314,6 +4314,13 @@ dom-serializer@0:
   dependencies:
     domelementtype "^2.0.1"
     entities "^2.0.0"
+
+dom7@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-3.0.0.tgz#b861ce5d67a6becd7aaa3ad02942ff14b1240331"
+  integrity sha512-oNlcUdHsC4zb7Msx7JN3K0Nro1dzJ48knvBOnDPKJ2GV9wl1i5vydJZUSyOfrkKFDZEud/jBsTk92S/VGSAe/g==
+  dependencies:
+    ssr-window "^3.0.0-alpha.1"
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -5729,6 +5736,16 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+highlight.js@*:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.0.1.tgz#a78bafccd9aa297978799fe5eed9beb7ee1ef887"
+  integrity sha512-EqYpWyTF2s8nMfttfBA2yLKPNoZCO33pLS4MnbXQ4hECf1TKujCt1Kq7QAdrio7roL4+CqsfjqwYj4tYgq0pJQ==
+
+highlight.js@^10.6.0:
+  version "10.7.3"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
+  integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
 highlight.js@^10.7.1:
   version "10.7.2"
@@ -10217,6 +10234,11 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
+  integrity sha512-q+8UfWDg9Itrg0yWK7oe5p/XRCJpJF9OBtXfOPgSJl+u3Xd5KI328RUEvUqSMVM9CiQUEf1QdBzJMkYGErj9QA==
+
 ssri@^6.0.1:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
@@ -10536,6 +10558,14 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+swiper@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.7.0.tgz#ec971e703d03ef6196354140fbb22b074642bf5c"
+  integrity sha512-zCfvWn7H7mCq7jgVurckhAwkjPUeMCkdC4rA7lagvaD3mIrNhKiaYYo2+nkxMVpiaWuCQ38e44Mya/dKb7HpyQ==
+  dependencies:
+    dom7 "^3.0.0"
+    ssr-window "^3.0.0"
 
 symbol-observable@1.0.1:
   version "1.0.1"
@@ -11242,6 +11272,13 @@ vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.6.0:
     esquery "^1.4.0"
     lodash "^4.17.15"
 
+vue-highlightjs@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/vue-highlightjs/-/vue-highlightjs-1.3.3.tgz#29a0d57132fc1ce15cfa61e896918f5b718c5d52"
+  integrity sha1-KaDVcTL8HOFc+mHolpGPW3GMXVI=
+  dependencies:
+    highlight.js "*"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -11323,15 +11360,25 @@ vue-tilt.js@^1.1.1:
   dependencies:
     vanilla-tilt "^1.7.0"
 
+vue-typical@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/vue-typical/-/vue-typical-1.6.2.tgz#cd8ed60fe155c47680c060962c98908c693e8858"
+  integrity sha512-e2fvVhq9GcEKyCrD/BDO27/UZWMqpwNtKKcr1ABOC7ruGzvXOH53F/22vc7prQD+gtgmKHzrZZIMAb536mQR7Q==
+  dependencies:
+    core-js "^2.6.12"
+    highlight.js "^10.6.0"
+    vue "^2.6.10"
+    vue-highlightjs "^1.3.3"
+
 vue2-animate@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/vue2-animate/-/vue2-animate-2.1.4.tgz#7a241b8a0f839d97b9df63d4551fbe666354175e"
   integrity sha512-tIFHLxLYXwti0E3rJ7OeIUxTl+uVC8t9SYlD4aQ+gfgcheSu9yDbXklBNRIFxBmfNWDVpKQLMvGLxRrrCn3alw==
 
-vue3-carousel@^0.1.21:
-  version "0.1.21"
-  resolved "https://registry.yarnpkg.com/vue3-carousel/-/vue3-carousel-0.1.21.tgz#0dfcf80a813ee01b9b76c4be825c0dbacffdf230"
-  integrity sha512-Ft6KiV+4fQ0qGVHsQ9l1posnU0tCKUuE7OBSt2Hspudh+cMJp4wvbvnX9DOPE6lSx9Gp33pn35nba/Y8wMWcwg==
+vue@^2.6.10:
+  version "2.6.14"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
+  integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
 
 vue@^3.0.0:
   version "3.0.11"
@@ -11384,10 +11431,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"

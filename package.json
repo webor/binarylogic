@@ -19,13 +19,14 @@
     "gsap": "^3.7.0",
     "particles.vue3": "^1.11.0",
     "register-service-worker": "^1.7.1",
+    "swiper": "^6.7.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-cli-plugin-s3-deploy": "^4.0.0-rc4",
     "vue-router": "^4.0.0-0",
     "vue-tilt.js": "^1.1.1",
+    "vue-typical": "^1.6.2",
     "vue2-animate": "^2.1.4",
-    "vue3-carousel": "^0.1.21",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

@@ -130,13 +130,63 @@
         "subtitle": "A small gallery of recent projects chosen by me. I've done them all together with amazing people from world around",
         "items": [
             {
-                "color": "red",
-                "content": "A Native appication for android and ios for travel based domain. Easily configurable through config files!<br><br>Link : <a href='https://play.google.com/store/apps/details?id=com.tgsapp'> https://play.google.com/store/apps/details?id=com.tgsapp</a>",
+                "content": "A Native appication for android and ios for travel based domain. Easily configurable through config files to serve multiple clients   <br>Multiple products packed within a 14mb app<br><br>Link : <a href='https://play.google.com/store/apps/details?id=com.tgsapp'> https://play.google.com/store/apps/details?id=com.tgsapp</a>",
                 "date": "2021-05-30",
-                "image": "ig.gif",
+                "image": "project_1.png",
+                "tag": "App",
+                "title": "Android/IOS App",
+                "tech": [
+                    {
+                        "logo": "android.png",
+                        "tooltip": "Android"
+                    },
+                    {
+                        "logo": "ios.png",
+                        "tooltip": "Ios"
+                    },
+                    {
+                        "logo": "react-native.jpeg",
+                        "tooltip": "React Native"
+                    },
+                    {
+                        "logo": "ts.png",
+                        "tooltip": "Typescript"
+                    }
+                ]
+            },
+            {
+                "content": "Created a Form Component Library supporting various views and layout .<br> Developed Rules Engine and validations framework which helped in creating 70+ screens in two months time.<br> JSON configurable  which helped in creating Access Control Modules based on user roles <br><br>Link : <a href='https://demo-dashboard.technogramsolutions.com/'> https://demo-dashboard.technogramsolutions.com/</a>",
+                "date": "2018-11-20",
+                "image": "project_2.png",
+                "tag": "Library",
+                "title": "Forms Library",
+                "tech": [
+                    {
+                        "logo": "js.png",
+                        "tooltip": "Javascript"
+                    },
+                    {
+                        "logo": "react.png",
+                        "tooltip": "React"
+                    },
+                    {
+                        "logo": "node.png",
+                        "tooltip": "Node Js"
+                    },
+                    {
+                        "logo": "webpack.png",
+                        "tooltip": "Webpack"
+                    }
+                ]
+            },
+            {
+                "color": "red",
+                "content": "A Native appication for android and ios for travel based domain. Easily configurable through config files to serve multiple clients  <br><br>Link : <a href='https://play.google.com/store/apps/details?id=com.tgsapp'> https://play.google.com/store/apps/details?id=com.tgsapp</a>",
+                "date": "2021-05-30",
+                "image": "project_1.png",
                 "link": "https://github.com/hbollon/IG_Automation_Bot",
                 "tag": "App",
-                "title": "React Native + Expo Android/ios App"
+                "title": "React Native + Expo Android/IOS App"
             }
         ]
     }

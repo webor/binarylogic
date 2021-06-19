@@ -7,56 +7,93 @@
         :description="projects.subtitle"
       />
     </AnimateOnVisible>
-
     <div class="container-fluid center-block">
       <article class="content text-center">
-        <carousel :items-to-show="1.5">
-          <slide v-for="(post, index) in projects.items" :key="index">
-            <h2>{{ post.title }}</h2>
-            <div class="wrapper">
-              <div class="text-wrapper">{{ post.description }}</div>
-            </div>
-            <img
-              class="photo_dp"
-              :src="getImgUrl(imgSrc)"
-              alt="photo"
-              v-tilt="{
-                max: 25,
-                scale: 1.1,
-                glare: true,
-                speed: 200,
-                perspective: 2000,
-              }"
-            />
-          </slide>
-          <template #addons>
-            <navigation />
-            <pagination />
-          </template>
-        </carousel>
+        <div class="example-3d">
+          <swiper
+            :effect="'coverflow'"
+            :grabCursor="true"
+            :centeredSlides="true"
+            :slidesPerView="1.5"
+            :space-between="0"
+            :coverflowEffect="{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }"
+            :pagination="true"
+            class="mySwiper"
+          >
+            <swiper-slide v-for="(post, index) in projects.items" :key="index">
+              <span class="pseudo_ribbon">{{
+                new Date(post.date).toDateString()
+              }}</span>
+              <div :class="['carousel_slide carousel_bg_' + randomNumber()]">
+                <div class="carousel_left">
+                  <img
+                    class="photo_carousel"
+                    :src="getImgUrl(post.image)"
+                    alt="photo"
+                  />
+                </div>
+                <div class="carousel_right">
+                  <h2>{{ post.title }}</h2>
+                  <div class="carousel_text">
+                    <div class="text-wrapper" v-html="post.content"></div>
+                  </div>
+                  <div class="tech_wrap carousel_text">
+                    <span> Tech Stack: </span>
+                    <span v-for="(tech, index) in post.tech" :key="index">
+                      <img
+                        class="tech_wrap_img"
+                        :src="getImgTechUrl(tech.logo)"
+                        alt="photo"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper>
+        </div>
       </article>
     </div>
   </section>
 </template>
+      
 
 <script>
-import "vue3-carousel/dist/carousel.css";
 import Title from "./Title.vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/swiper.scss";
+import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+import "swiper/components/pagination/pagination.min.css";
+// import Swiper core and required modules
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
+
+// install Swiper modules
+SwiperCore.use([EffectCoverflow, Pagination]);
 export default {
   name: "Projects",
   props: ["projects"],
   components: {
     Title,
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation,
+    Swiper,
+    SwiperSlide,
   },
   methods: {
+    randomNumber: () => {
+      return Math.floor(Math.random() * 9) + 1;
+    },
     getImgUrl(img) {
       if (img == undefined || img == "") return "";
       return require("../assets/img/projects/" + img);
+    },
+    getImgTechUrl(img) {
+      if (img == undefined || img == "") return "";
+      return require("../assets/img/logo/" + img);
     },
   },
 };
@@ -64,7 +101,6 @@ export default {
 
 <style scoped lang="scss">
 @import "@/styles/constants.scss";
-
 $linear: map-get($colors, dark);
 
 #projects {
@@ -88,6 +124,15 @@ article .inner {
   z-index: 1;
 }
 
+.pseudo_ribbon {
+  position: absolute;
+  right: -10px;
+  color: white;
+  top: 15px;
+  font-size: 1.4rem;
+  z-index: 10;
+}
+
 .content {
   color: map-get($colors, secondary);
   margin-top: 30px;
@@ -103,6 +148,153 @@ article .inner {
 .vertical-center {
   display: flex;
   align-items: center;
+}
+.carousel_left {
+  width: 50%;
+  display: inline-block;
+  border-right: solid 1px #a9a9a9;
+}
+.carousel_right {
+  width: 45%;
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.carousel_slide {
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 30px 0px 0 0;
+  height: 480px;
+  overflow: hidden;
+  background-color: map-get($colors, light);
+  h2 {
+    padding-bottom: 30px;
+    font-size: 24px;
+  }
+}
+.photo_carousel {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  overflow: hidden;
+}
+.carousel_bg_1 {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+.carousel_bg_2 {
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+}
+.carousel_bg_3 {
+  background-color: #d5fefd;
+  background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);
+}
+.carousel_bg_4 {
+  background-color: #d9e4f5;
+  background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+}
+.carousel_bg_5 {
+  background-color: #fee2f8;
+  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+}
+.carousel_bg_6 {
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+}
+.carousel_bg_7 {
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+.carousel_bg_8 {
+  background-color: #f3e6e8;
+  background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
+}
+.carousel_bg_9 {
+  background-color: #f1dfd1;
+  background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+
+.tech_wrap_img {
+  max-width: 25px;
+  max-height: 25px;
+  margin: 0 5px;
+}
+
+.swiper-container {
+  display: inline-block;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.carousel_slide::before {
+  position: absolute;
+  content: "";
+  background: map-get($colors, primary);
+  height: 40px;
+  width: 40px;
+  top: 19px;
+  z-index: -1;
+  right: -15px;
+  transform: rotate(45deg);
+}
+.carousel_slide::after {
+  position: absolute;
+  content: "In Progress";
+  top: 10px;
+  right: -24px;
+  padding: 0.5rem;
+  width: 14rem;
+  font-size: 1.4rem;
+  background: #353535;
+  color: transparent;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 2px;
+  box-shadow: 4px 4px 15px rgb(26 35 126 / 20%);
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+.carousel_text {
+  text-align: left;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tech_wrap {
+  position: absolute;
+  bottom: 10%;
 }
 
 h1 {
