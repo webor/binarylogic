@@ -122,6 +122,14 @@
             {
                 "title": "Apache",
                 "img": "apache.png"
+            },
+            {
+                "img": "redux.png",
+                "title": "Redux"
+            },
+            {
+                "img": "rxjs.png",
+                "title": "Rx Js"
             }
         ]
     },
@@ -156,7 +164,7 @@
             },
             {
                 "content": "Created a Form Component Library supporting various views and layout .<br> Developed Rules Engine and validations framework which helped in creating 70+ screens in two months time.<br> JSON configurable  which helped in creating Access Control Modules based on user roles <br><br>Link : <a href='https://demo-dashboard.technogramsolutions.com/'> https://demo-dashboard.technogramsolutions.com/</a>",
-                "date": "2018-11-20",
+                "date": "2019-02-20",
                 "image": "project_2.png",
                 "tag": "Library",
                 "title": "Forms Library",
@@ -176,17 +184,100 @@
                     {
                         "logo": "webpack.png",
                         "tooltip": "Webpack"
+                    },
+                    {
+                        "logo": "redux.png",
+                        "tooltip": "Redux"
                     }
                 ]
             },
             {
-                "color": "red",
-                "content": "A Native appication for android and ios for travel based domain. Easily configurable through config files to serve multiple clients  <br><br>Link : <a href='https://play.google.com/store/apps/details?id=com.tgsapp'> https://play.google.com/store/apps/details?id=com.tgsapp</a>",
-                "date": "2021-05-30",
-                "image": "project_1.png",
-                "link": "https://github.com/hbollon/IG_Automation_Bot",
-                "tag": "App",
-                "title": "React Native + Expo Android/IOS App"
+                "content": "Angular application for Burger Joint webapp. Used Angular 6 + TypeScript + RxJS <br> This is POC application served with Mockito  <br><br>Link : <a href='https://github.com/webor/Angular-Burger-Outlet-app'> https://github.com/webor/Angular-Burger-Outlet-app</a>",
+                "date": "2018-08-23",
+                "image": "project_3.png",
+                "tag": "Web Application",
+                "title": "Burger Merger",
+                "tech": [
+                    {
+                        "logo": "angular.png",
+                        "tooltip": "Angular"
+                    },
+                    {
+                        "logo": "ts.png",
+                        "tooltip": "Typescript"
+                    },
+                    {
+                        "logo": "rxjs.png",
+                        "tooltip": "Rx Js"
+                    }
+                ]
+            },
+            {
+                "content": "Utilized AWS SQS for polling and fault tolerance.<br> A Download Request spawns Background thread on Node Server which <br> in turn makes API Calls to fetch data, generate invoices pdfs, merge them and losslessly compress them to a consize pdf. Compression done using linux ghostscript",
+                "date": "2020-09-05",
+                "image": "project_4.png",
+                "tag": "Software",
+                "title": "Bulk Downloads + Merge + Compress",
+                "tech": [
+                    {
+                        "logo": "node.png",
+                        "tooltip": "Node Js"
+                    },
+                    {
+                        "logo": "aws.png",
+                        "tooltip": "AWS"
+                    },
+                    {
+                        "logo": "bash.png",
+                        "tooltip": "Bash Shell"
+                    },
+                    {
+                        "logo": "gs.png",
+                        "tooltip": "Ghostscript"
+                    }
+                ]
+            },
+            {
+                "content": "Web application created during my stint at <a href='https://www.technogramsolutions.com/'>Technogram Solutions</a> <br> Used all latest web technologies likes of which are React, Redux, PWA service-workers, Firebase for Push Notifications<br> Implemented Dynamic Configuration System helped to achive Customizable features across Dozens of clients and improved A-B testing <br>",
+                "date": "2020-01-05",
+                "image": "project_5.png",
+                "tag": "Web Application",
+                "title": "WebApp +PWA",
+                "tech": [
+                    {
+                        "logo": "react.png",
+                        "tooltip": "React"
+                    },
+                    {
+                        "logo": "redux.png",
+                        "tooltip": "Redux"
+                    },
+                    {
+                        "logo": "firebase.png",
+                        "tooltip": "Firebase"
+                    },
+                    {
+                        "logo": "pwa.png",
+                        "tooltip": "PWA"
+                    }
+                ]
+            },
+            {
+                "content": "CI/CD pipeline setup using bash shell scripts and Jenkins Jobs.<br> Automating Client Onboarding and server setup using YAML to describe CI/CD pipeline",
+                "date": "2021-02-25",
+                "image": "project_6.png",
+                "tag": "Software",
+                "title": "Devops",
+                "tech": [
+                    {
+                        "logo": "jenkins.png",
+                        "tooltip": "Jenkins"
+                    },
+                    {
+                        "logo": "bash.png",
+                        "tooltip": "Bash"
+                    }
+                ]
             }
         ]
     }

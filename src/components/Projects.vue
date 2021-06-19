@@ -168,7 +168,7 @@ article .inner {
   overflow: hidden;
   background-color: map-get($colors, light);
   h2 {
-    padding-bottom: 30px;
+    padding: 30px 0;
     font-size: 24px;
   }
 }
@@ -295,6 +295,30 @@ article .inner {
 .tech_wrap {
   position: absolute;
   bottom: 10%;
+}
+
+@media (max-width: #{map-get($breakpoints, mobile)}) {
+  // .carousel_slide {
+  //   height: 400px;
+  // }
+  // .swiper-slide {
+  //   height: 400px;
+  // }
+  .carousel_left {
+    display: none;
+  }
+  .carousel_right {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .carousel_slide h2 {
+    padding: 20px 0 10px 0;
+  }
+  .carousel_text {
+    .text-wrapper {
+      padding: 2%;
+    }
+  }
 }
 
 h1 {
