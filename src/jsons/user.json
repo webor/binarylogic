@@ -138,7 +138,7 @@
         "subtitle": "A small gallery of recent projects chosen by me. I've done them all together with amazing people from world around",
         "items": [
             {
-                "content": "A Native appication for android and ios for travel based domain. Easily configurable through config files to serve multiple clients   <br>Multiple products packed within a 14mb app<br><br>Link : <a href='https://play.google.com/store/apps/details?id=com.tgsapp'> https://play.google.com/store/apps/details?id=com.tgsapp</a>",
+                "content": "A Native appication for android and ios for travel based domain. Easily configurable through config files to serve multiple clients   <br>Multiple products web views packed within a 14mb app<br>",
                 "date": "2021-05-30",
                 "image": "project_1.png",
                 "tag": "App",
