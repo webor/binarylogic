@@ -76,6 +76,7 @@ import Title from "./Title.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper.scss";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+import "swiper/components/pagination/pagination.scss";
 import "swiper/components/pagination/pagination.min.css";
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
