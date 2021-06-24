@@ -4,7 +4,7 @@
     <div class="data"><strong>E-mail:</strong> {{ social.email }}</div>
     <div class="data"><strong>Phone:</strong> {{ social.phone }}</div>
     <div class="data"><strong>City:</strong> {{ social.city }}</div>
-    <!-- <div class="data"><strong>Languages:</strong> {{ user.lang }}</div> -->
+    <div class="data"><a href="/pdfs/resume.pdf">Download Resume</a></div>
     <SocialBar :links="social.links" />
   </div>
 </template>
