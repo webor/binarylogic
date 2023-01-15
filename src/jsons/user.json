@@ -286,5 +286,20 @@
                 ]
             }
         ]
+    },
+    "certs": {
+        "title": "Certifications and Badges",
+        "subtitle": "Credentials earned",
+        "items": [
+            {
+                "content": "",
+                "date": "2022-06-12",
+                "image": "cert_1.jpg",
+                "tag": "Software",
+                "color": "#04AA6D",
+                "title": "",
+                "tech": []
+            }
+        ]
     }
 }

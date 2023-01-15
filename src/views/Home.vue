@@ -2,92 +2,88 @@
   <transition name="fade" tag="div" class="home" mode="out-in">
     <div class="wrapper" v-if="isLoaded" id="app">
       <div id="tsparticles">
-        <Particles
-          id="tsparticles"
-          :particlesInit="particlesInit"
-          :particlesLoaded="particlesLoaded"
-          :options="{
-            background: {
-              color: {
-                value: '#ffffff00',
+        <Particles id="tsparticles" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded" :options="{
+          background: {
+            color: {
+              value: '#ffffff00',
+            },
+          },
+          fpsLimit: 60,
+          interactivity: {
+            detectsOn: 'window',
+            events: {
+              onClick: {
+                enable: true,
+                mode: 'push',
+              },
+              onHover: {
+                enable: true,
+                mode: 'repulse',
+              },
+              resize: true,
+            },
+            modes: {
+              bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+              },
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 100,
+                duration: 0.4,
               },
             },
-            fpsLimit: 60,
-            interactivity: {
-              detectsOn: 'window',
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: 'push',
-                },
-                onHover: {
-                  enable: true,
-                  mode: 'repulse',
-                },
-                resize: true,
-              },
-              modes: {
-                bubble: {
-                  distance: 400,
-                  duration: 2,
-                  opacity: 0.8,
-                  size: 40,
-                },
-                push: {
-                  quantity: 4,
-                },
-                repulse: {
-                  distance: 100,
-                  duration: 0.4,
-                },
-              },
+          },
+          particles: {
+            color: {
+              value: '#333',
             },
-            particles: {
-              color: {
-                value: '#333',
-              },
-              links: {
-                color: '#A9A9A9',
-                distance: 180,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              collisions: {
-                enable: true,
-              },
-              move: {
-                direction: 'none',
-                enable: true,
-                outMode: 'bounce',
-                random: false,
-                speed: 1,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  value_area: 800,
-                },
-                value: 80,
-              },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: 'circle',
-              },
-              size: {
-                random: true,
-                value: 4,
-              },
+            links: {
+              color: '#A9A9A9',
+              distance: 180,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
             },
-            detectRetina: true,
-          }"
-        />
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: 'none',
+              enable: true,
+              outMode: 'bounce',
+              random: false,
+              speed: 1,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: 'circle',
+            },
+            size: {
+              random: true,
+              value: 4,
+            },
+          },
+          detectRetina: true,
+        }" />
       </div>
       <LandingPage :user="user" />
       <Description :user="user" />
+      <Certification :certs="user.certs" />
       <Skills :skills="user.skills" />
       <Projects :projects="user.projects" />
       <Footer :user="user" />
@@ -102,6 +98,7 @@ import Skills from "../components/Skills.vue";
 import Projects from "../components/Projects.vue";
 import Footer from "../components/Footer.vue";
 import user from "../jsons/user.json";
+import Certification from "../components/Certification.vue";
 
 export default defineComponent({
   name: "Home",
@@ -111,6 +108,7 @@ export default defineComponent({
     Skills,
     Projects,
     Footer,
+    Certification
   },
   data: () => ({
     isLoaded: false,
@@ -143,7 +141,7 @@ export default defineComponent({
   },
   created(): void {
     Promise.all([this.fetchPosts(), this.fetchUser()]).then(
-      ([posts, users]) => {
+      () => {
         document.body.classList.add("loading");
         this.isLoaded = true;
       }
@@ -168,6 +166,7 @@ canvas {
   -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
   transition: opacity 0.8s ease, transform 1.4s ease;
 }
+
 #tsparticles {
   width: 100%;
   height: 100%;
