@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c18e034ed61af17e356a114fa0b04606.js"
+  "/precache-manifest.cdb24be9d43d41bd60b6127bbeea3a24.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "binarylogic"});
