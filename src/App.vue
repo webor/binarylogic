@@ -2,6 +2,8 @@
   <div id="nav" v-if="this.$route.path !== '/'">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
+    <router-link class="italics" to="/go-mindset">GO mindset</router-link>
+    <router-link class="kubernetes" to="/kubernetes">Kubernetes</router-link>
   </div>
   <router-view />
 </template>
@@ -25,12 +27,20 @@
   transform: translate3d(0, 0, 0);
   transition: 0.1s all ease-out;
   a {
+    font-size: 16px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #c5c5c5;
+    padding: 0 10px;
+    &:hover{
+      color: #ffffff;
+    }
 
     &.router-link-exact-active {
       color: #ffffff;
     }
+  }
+  .italics {
+    font-style: italic;
   }
 }
 #nav#navbar--hidden {

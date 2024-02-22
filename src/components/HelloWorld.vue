@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <div class="dummy_header"></div>  
+    <div class="header">
+      <img id="logo" alt="Binary Logic Logo" src="../assets/img/logo.png" />
+      <h1>{{ msg }}</h1>
+    </div>
     <p>This project is owned by Vibhor Tambat</p>
     <embed
       src="/pdfs/resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
@@ -25,6 +29,24 @@ export default class HelloWorld extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dummy_header {
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+
+#logo {
+  width: 25px;
+  height: 25px;
+}
 h3 {
   margin: 40px 0 0;
 }

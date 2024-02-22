@@ -81,6 +81,7 @@
           detectRetina: true,
         }" />
       </div>
+      <Navbar :user="user" />
       <LandingPage :user="user" />
       <Description :user="user" />
       <Certification :certs="user.certs" />
@@ -93,6 +94,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import LandingPage from "../components/LandingPage.vue";
+import Navbar from "../components/Navbar.vue";
 import Description from "../components/Description.vue";
 import Skills from "../components/Skills.vue";
 import Projects from "../components/Projects.vue";
@@ -104,6 +106,7 @@ export default defineComponent({
   name: "Home",
   components: {
     LandingPage,
+    Navbar,
     Description,
     Skills,
     Projects,

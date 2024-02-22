@@ -6,7 +6,7 @@
         <div class="container-fluid center-block">
             <article class="content text-center">
                 <div class="example-3d">
-                    <swiper :effect="'coverflow'" :grabCursor="true" :centeredSlides="true" :slidesPerView="1.5"
+                    <swiper :effect="'coverflow'" :grabCursor="true" :centeredSlides="true" :slidesPerView="1"
                         :space-between="0" :coverflowEffect="{
                             rotate: 50,
                             stretch: 0,
@@ -18,10 +18,8 @@
                             <span class="pseudo_ribbon">{{
                                 new Date(post.date).toDateString()
                             }}</span>
-                            <div :class="['carousel_slide carousel_bg_15']">
-                                <div class=" carousel_left">
+                            <div :class="['carousel_transparent']">
                                     <img class="cert_carousel" :src="getImgUrl(post.image)" alt="photo" />
-                                </div>
                             </div>
                         </swiper-slide>
                     </swiper>
@@ -157,6 +155,10 @@ article .inner {
         padding: 30px 0;
         font-size: 24px;
     }
+}
+.carousel_transparent {
+    box-sizing: border-box;
+    background: transparent;
 }
 
 .cert_carousel {
